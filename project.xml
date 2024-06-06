@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="HxFlash" package="com.acrazytown.hxflash" version="1.0.0" company="acrazytown" />
+	<app main="Main" path="export" file="HxFlash" />
+	
+	<source path="src" />
+	
+	<haxelib name="haxeui-core" />
+	<haxelib name="haxeui-openfl" />
+	<haxelib name="openfl" />
+	
+	<assets path="assets" />
+	
+</project>

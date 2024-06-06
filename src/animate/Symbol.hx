@@ -1,0 +1,4 @@
+package animate;
+
+class Symbol
+{}
