@@ -4,6 +4,6 @@ class DOMTimeline
 {
     public function new()
     {
-        
+
     }   
 }

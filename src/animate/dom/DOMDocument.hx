@@ -51,7 +51,7 @@ class DOMDocument
 
             var href = _symbolInclude.att.resolve("href");
             var dsi:DOMSymbolItem = new DOMSymbolItem(Assets.getText('${project.path}/LIBRARY/$href'));
-            
+
             symbols.set(dsi.name, dsi);
         }
     }
