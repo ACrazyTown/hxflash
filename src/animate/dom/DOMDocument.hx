@@ -5,7 +5,7 @@ import animate.structs.DOMDocumentCreatorData;
 import lime.utils.Assets;
 import haxe.xml.Access;
 
-class DOMDocument
+class DOMDocument extends BaseDOMItem
 {
     public var width(default, null):Int = 0;
     public var height(default, null):Int = 0;
@@ -13,12 +13,10 @@ class DOMDocument
     public var creatorData(default, null):DOMDocumentCreatorData;
     public var symbols:StringMap<DOMSymbolItem>;
 
-    private var project:XFLProject;
-
     @:allow(animate.XFLProject)
-    private function new(xmlData:String, project:XFLProject)
+    private function new(project:XFLProject, xmlData:String)
     {
-        this.project = project;
+        super(project);
 
         var _xml:Xml = Xml.parse(xmlData);
         var data:Access = new Access(_xml);
@@ -50,7 +48,7 @@ class DOMDocument
             // I will probably make a wrapper or something for this so it acts more as it would in the actual program rather than just being the actual XML data
 
             var href = _symbolInclude.att.resolve("href");
-            var dsi:DOMSymbolItem = new DOMSymbolItem(Assets.getText('${project.path}/LIBRARY/$href'));
+            var dsi:DOMSymbolItem = new DOMSymbolItem(_project, Assets.getText('${_project.path}/LIBRARY/$href'));
 
             symbols.set(dsi.name, dsi);
         }

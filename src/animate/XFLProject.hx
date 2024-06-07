@@ -1,5 +1,7 @@
 package animate;
 
+import animate.dom.DOMSymbolItem;
+import animate.dom.DOMTimeline;
 import openfl.Assets;
 import animate.dom.DOMDocument;
 
@@ -20,6 +22,6 @@ class XFLProject
         var processedPath:String = Path.normalize(path);
         this.path = processedPath;
 
-        document = new DOMDocument(Assets.getText('$processedPath/DOMDocument.xml'), this);
+        document = new DOMDocument(this, Assets.getText('$processedPath/DOMDocument.xml'));
     }
 }
