@@ -9,9 +9,15 @@ import haxe.io.Path;
 
 class XFLProject
 {
-    public var document:DOMDocument;
+    /**
+     * The DOMDocument instance.
+     */
+    public var document(default, null):DOMDocument;
 
-    public var path:String;
+    /**
+     * The path to the folder with all the XFL data.
+     */
+    public var path(default, null):String;
 
     /**
      * Loads an XFL project from folder.
