@@ -6,8 +6,8 @@
 	
 	<source path="src" />
 	
-	<haxelib name="haxeui-core" />
-	<haxelib name="haxeui-openfl" />
+	<!--<haxelib name="haxeui-core" />
+	<haxelib name="haxeui-openfl" />-->
 	<haxelib name="openfl" />
 	
 	<assets path="assets" />

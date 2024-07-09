@@ -36,13 +36,17 @@ class Symbol extends Sprite
 
         for (style in fillStyles)
         {
-            /*
             //throws SolidColor is not a value... prolly need to restructure!
             if (Std.isOfType(style.data, SolidColor))
             {
-                
+                var c:SolidColor = cast style.data;
+                var cmd = (gfx:Graphics) -> 
+                {
+                    gfx.beginFill(c.color, c.alpha);
+                };
+
+                commands.push(cmd);
             }
-            */
         }
 
         return commands;
